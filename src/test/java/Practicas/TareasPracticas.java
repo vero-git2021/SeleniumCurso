@@ -31,7 +31,7 @@ public class TareasPracticas
         {
             // WebElement buttonSingIn = driver.findElement(By.xpath("/html/body/div/div[1]/header/div[2]/div/div/nav/div[1]/a"));
             // WebElement buttonSingIn = driver.findElement(By.className("login"));
-            WebElement buttonSingIn = driver.findElement(By.xpath("//a[@class='login']"));
+            WebElement buttonSingIn = driver.findElement(By.xpath("//a[@class='login']")); //hacer el ejercicio de busqueda por clase
             buttonSingIn.click();
             Thread.sleep(5000);
 
@@ -51,10 +51,10 @@ public class TareasPracticas
             inputPassw.sendKeys("test1235");
             Thread.sleep(2000);
 
-            WebElement sendError = driver.findElement(By.className("alert alert-danger"));
+          /*  WebElement sendError = driver.findElement(By.className("alert alert-danger"));
             getClass("alert alert-danger");
             Thread.sleep(5000);
-
+*/
 
         }
 
@@ -64,8 +64,5 @@ public class TareasPracticas
                 //Cierra el navegador
                 driver.quit();
             }
-
-
-
 
 }
