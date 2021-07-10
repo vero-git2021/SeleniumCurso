@@ -48,7 +48,7 @@ public class Login
         Thread.sleep(2000); // hacerlo de tarea*/
     }
 
-    public void cerrarSesion (WebDriver)
+    public void cerrarSesion (WebDriver driver)
     {
         //*******NOTA DE ESTUDIO***************
         /* EN CADA CLASE DE FEAUTURES PODEMOS COLOCAR MULTIPLES FUNCIONALIDES,
@@ -57,12 +57,7 @@ public class Login
            SESION,
          */
     }
-
-    public void cerrarSesion (WebDriver driver)
-    {
-
-    }
-
+    
     public void loginIncorrecto (WebDriver driver)
     {
 
