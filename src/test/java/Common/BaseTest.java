@@ -1,24 +1,41 @@
 package Common;
 
+import Features.Login;
+import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BaseTest
 {
-    private WebDriver driver = null;
-    private WebDriverWait wait = null;
+    //************* Instancias********************
+
+    public static WebDriver driver = null;
+    Login login = new Login();
 
     @Before
     public void Login() throws Exception
     {
-        //Crear driver
+        // Crear Driver
+
         driver = Config.navegadorChrome();
-        wait = new WebDriverWait(driver, 15);
+
+        //MAXIMIZA LA VENTANA DEL NAVEGADOR
         driver.manage().window().maximize();
 
-        // Login
+        //LA FUNCION "driver.get", NOS SIRVE PARA MANDAR LA URL AL NAVEGADOR
         driver.get(Config.URL_QA);
+
+        // POR MEDIO DEL OBJETO "login", MANDAMOS TRAER (INSTANCIAMS) EL PROCESO DE INICIAR SESION
+
+        login.miLogin(driver);
+
+    }
+
+    @After
+    public void theardown()
+    {
+        //LA FUNCION "driver.quit", NOS SIRVE PARA CERRAR EL NAVEGADOR
+        driver.quit();
 
     }
 
