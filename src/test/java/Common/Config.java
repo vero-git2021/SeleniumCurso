@@ -14,12 +14,12 @@ public class Config
 
     public static WebDriver navegadorChrome ()
     {
-        System.getProperty("webdriver.chrome.driver", "src/main/resources/Drivers/ChromeDriver/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src/main/resources/Drivers/ChromeDriver/chromedriver.exe");
         return new ChromeDriver();
     }
     public static WebDriver navegadorFirefox ()
     {
-        System.getProperty("webdriver.gecko.driver", "src/main/resources/Drivers/FirefoxDriver/geckodriver.exe");
+        System.setProperty("webdriver.gecko.driver", "src/main/resources/Drivers/FirefoxDriver/geckodriver.exe");
         return new FirefoxDriver();
     }
 
